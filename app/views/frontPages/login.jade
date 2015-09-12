@@ -1,0 +1,40 @@
+extends ../main.jade
+
+block customHead 
+  title Login Page
+  meta(name="description", content="Welcome to the Login Page")
+  meta(name="author", content="Michael Lindon")
+  include ../common/common_Head.jade
+
+block customCSS
+  include ../common/common_CSS.jade
+
+block customContent
+    h1 Welcome to My Main Page
+    div.row
+         div.col-md-4 
+           image(src="/img/faces/Mikes_face-w250-h250.jpg")
+         div.col-md-8 
+           p.
+             Hi, I am Michael Lindon.  Physicist, engineer, computer scientist, web designer and some other stuff.
+             You have arrived at my MEAN (Mongodb, Express, Angular and Node) test page.  This is where I test 
+             out code I am currently working on, discuss things
+             related to coding and say things about my other hobbies, like board game design.
+    div.row
+      div.col-md-12
+        h2 I play with this site a lot.
+        p.
+          In case you didn't read my bio, this site will always be under construction in one shape or another.  However,
+          I want to keep it functional, so if anything that you think should work and isn't please tell me (<- like my grammar).
+    div.row
+      div.col-md-12
+        h2 My todo list.
+        ul
+           li make the site more angular heavy (currently heavily use Jade for rendering)
+           li setup register new users page 
+           li setup user login
+           li setup password reset
+           li setup blog system
+           li setup user settings system
+           li setup
+

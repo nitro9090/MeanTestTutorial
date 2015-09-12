@@ -1,0 +1,98 @@
+extends ../main.jade
+
+block customHead 
+  title Register User
+  meta(name="description", content="Become a part of the collective")
+  meta(name="author", content="Michael Lindon")
+  include ../common/common_Head.jade
+
+block customCSS
+  include ../common/common_CSS.jade
+  style.
+     #registerTable, #coolnessTable {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+     table {
+       max-width: 600px;
+       border-collapse:collapse;
+       border:1px solid #FF0000;
+     }
+
+     table td{
+       border:1px solid #FF0000;
+     }
+
+     .registerCol1 > label {
+       margin-top: 3px;
+       margin-bottom: 3px;
+     }
+     
+     .registerCol2 > input {
+       width: 100%;
+       margin-top: 3px;
+       margin-bottom: 3px;
+     }
+
+block customContent
+    h1 Register to be Awesome 
+    h5 (Note, this is a very select version of awesome)
+    div.row
+      div.col-md-12
+        each val in messages
+          li.flash= val
+      div.col-md-8.col-md-offset-2
+        form(action="/register" method="post")
+          table#registerTable
+            tr
+             td.registerCol1
+               label(for="email") Your Email
+             td.registerCol2
+               input(type="text", name="email", placeholder="Only robot overlords with emails may pass", required autofocus)
+            tr
+             td.registerCol1
+               label(for="name") Code Name
+             td.registerCol2
+               input(type="text", name="name", placeholder="Ex: The Lindarian" required)
+            tr
+              td.registerCol1
+               label(for="username") Username
+              td.registerCol2
+               input(type="text", name="username", placeholder="insert name here", required)
+            tr
+             td.registerCol1
+               label(for="password") Password 
+             td.registerCol2
+               input(type="text", name="password", placeholder="Give me the password", required)
+            tr
+             td.registerCol1
+               label(for="password") Password double check
+             td.registerCol2
+               input(type="text", name="password", placeholder="Do it again", required)
+            tr
+             td(colspan="2")
+               span Disclaimer, this site is super secure, so please use the same password you use for your bank accounts and credit cards (In all seriousness don't)
+          
+          par.coolnessDisclaimer. 
+            To be part of this site, you need to be above and beyond the normal person.   To ensure this you must answer
+            the below questions.
+          table#coolnessTable
+            tr
+             td.registerCol1
+               label(for="5thElement"). 
+                 In the movie "The Fifth Element," exactly how many times does Corbin Dallas meet his nemesis,
+                 Jean-Baptiste Emanuel Zorg?
+             td.registerCol2
+               input(type="number", name="5thElement", value="1", required autofocus) 
+               span time
+            tr
+             td.registerCol1(colspan="2")
+               h3 Cornetto Trilogy
+            tr
+             td.registerCol1
+               label(for="CornettoTrilogy"). 
+                 In the cornetto trilogy, which yard accoutremount is included in a gag in each movie?
+             td.registerCol2
+               input(type="number", name="5thElement", value="1", required autofocus) 
+               span time

@@ -1,0 +1,52 @@
+extends ../main.jade
+
+block customHead 
+  title Board Game Designs
+  meta(name="description", content="A list of my current board game designs")
+  meta(name="author", content="Michael Lindon")
+  include ../common/common_Head.jade
+
+block customCSS
+  include ../common/common_CSS.jade
+  style.
+     .gameDescriptionDiv {
+       text-align: left;
+     }
+     .gameName {
+       //display: inline-block;
+       //margin-left: 0;
+     }
+     .gameState {
+       color: grey;
+       margin-top: 10px;
+       text-align: right;
+     }
+     @media(max-width:992px) {
+       .gameState {
+         text-align: left;
+       }
+     }
+
+block customContent
+    h1 Welcome to My Board Game Page
+    div.row
+      div.col-md-12
+        p.
+          One of my favorite hobbies is to design and test board games.  My board game philosophy is that 
+          each game needs both strategy and tactics with a controlled amount of luck (dice are only used when 
+          necessary).  With that, here is a list of my current designs and a little about them.  Note, most games  
+          are listed under their working title, which may be different than how I present them in other places.
+    div.row
+         div.col-md-4.gameImageDiv 
+           image(src="/img/boardGameDesign/BreakMyGame - Princely Courts-hgt-250px.jpg")
+         div.col-md-8.gameDescriptionDiv.container 
+           h3.gameName.col-md-8 The Princely Courts
+           p.gameState.col-md-4 Out for Review
+           p.gameDescription.col-md-12.
+             In the princely courts each player takes on the roles of an heir to the crown during the rennaissance each of which is vying to be the
+             next heir.
+             The easiest way to describe The Princely Courts gameplay is it is Diplomacy-light for 2-6 players.  It has similar levels of strategy, 
+             bluffing, intrigue and betrayal as Diplomacy.  However, it plays in about 45 minutes, has very little player elimination (the game ends when it happens) and it won’t ruin friendships.  
+             
+
+

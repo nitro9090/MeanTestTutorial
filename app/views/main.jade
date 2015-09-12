@@ -1,0 +1,32 @@
+html
+  head
+    block customHead
+    link(rel="stylesheet", href="/css/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/bootstrap/bootstrap-theme.min.css")
+    link(rel="stylesheet", href="/css/pageTopBot.css") 
+    block customCSS
+        
+  body(ng-app="theLindarianApp")
+    include pageTopBot/pageTop.jade
+    section(ng-view)
+      div #{user}
+    #mainContentSection.container.text-center
+      block customContent
+         h1 The website gods are angry
+         p  Please ask the web designer to do the ceremonial song and dance to get this part of the site working.
+    include pageTopBot/pageBottom.jade
+ 
+    script(type="text/javascript", src="/libs/angular/angular.min.js")
+    script(type="text/javascript", src="/js/angular-ui-router/angular-ui-router.min.js")
+    script(type="text/javascript", src="/modules/example/example.client.module.js")
+    script(type="text/javascript", src="/modules/example/controllers/example.client.controller.js")
+    script(type="text/javascript", src="/modules/example/config/example.client.routes.js")
+    script(type="text/javascript")
+      
+
+    script(src="js/vendor/jquery-1.11.2.min.js") 
+    script(src="js/vendor/bootstrap.min.js")
+    script(src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")
+
+    script window.jQuery || document.write('<script src="multiUseCode/js/vendor/jquery-1.11.2.min.js"><\/script>')
+    block customJs

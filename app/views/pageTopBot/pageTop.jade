@@ -1,0 +1,41 @@
+nav.navbar.navbar-default.navbar-fixed-top(id="header" role="navigation")
+  a(id="LogoLink", href="/", tabIndex="-1")
+    img(src="/img/logos/NitroglycerinGames/nitroglycerin-justLogo-hgt-60px.png", alt="logo")
+  div.container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    #navbar.navbar-collapse.collapse
+      ul#navBarPageTop.nav.navbar-nav.nav-pills
+        li.navBarStyling
+          a(href="/") Home
+        li.dropdown.navBarStyling
+          a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Stuff
+            span.caret
+          ul.dropdown-menu(role="menu")
+            li
+              a(href="/boardGameDesign") Board Game Designs
+      if user
+       #headerLoginSection
+         Welcome user.name
+      else
+         #headerLoginDiv
+           form#headerLogin(name="loginForm", action="/login", method="post")
+             fieldset
+               table
+                    tr
+                      td.headerLoginCol1
+                       input(name="userName", type="text", placeholder="User Name")
+                      td.headerLoginCol2
+                       button(id="headerLoginSubmit") Login
+                    tr
+                     td.headerLoginCol1
+                       input(name="password" type="text", placeholder="Password")
+                     td.headerLoginCol2
+                       div
+                         a(href="/register") Register
+                         span |
+                         a(href="") Forgetful?

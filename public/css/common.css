@@ -1,0 +1,92 @@
+html, body {
+    font-size: large;
+    // requirements for sticky footer
+    height: 100%;
+}
+
+#mainContentSection {
+     background: rgb(246, 246, 246);
+     background-clip: padding-box;
+     //background-image: url("/img/logos/NitroglycerinGames/final-logo-cropped-hgt-60px.png");
+     background-repeat: no-repeat;
+     background-position: center 75px; 
+}
+
+/*General CSS*/
+h3 {
+    margin-top: 10px;
+}
+
+h1 {
+     font-family: chickWeedFont;
+    font-size: 2.6em;
+    display:inline-block;
+    margin: 15px auto 20px auto;
+    color: white;
+    padding: 3px;
+    background-color: black;
+    border: 5px solid red;
+    box-shadow:  0em 0em .3em 0em black;
+    border-radius: .2em .2em .2em .2em;
+}
+
+h2 {
+     font-family: chickWeedFont;
+     display:inline-block;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: white;
+    background: black;
+    border: 3px solid red;
+    padding: 1px;
+    box-shadow:  0em 0em .1em 0em black;
+}
+
+.textBlock {
+    border: 1px solid grey;
+}
+
+hr {
+    margin: 2px 0 2px 0;
+}
+
+ol, ul {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: medium;
+    }
+    
+    #mainContentSection {
+     //background-image: url("/public/img/logos/GKlogos/GKlogo-transparent-Wid-350px-v4.png");
+    }
+    
+    ol, ul {
+    margin-left: 2px;
+    margin-right: 2px;
+    }
+}
+
+/* dropdown Button CSS */
+.dropDownDiv {
+    height: 0;
+    overflow: hidden;
+    text-align: left;
+    margin: 0 auto 0 auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.dropDownSign {
+    text-align: center;
+    margin: .3em 0 0 0;
+    width: 3%;
+}
